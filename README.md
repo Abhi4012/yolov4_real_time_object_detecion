@@ -6,30 +6,36 @@
  - we will create a requirements.txt for required library which is we will use for this project.
  - models are - we can use yolov1, yolov2, yolov3, yolov4, yolov5.
  - nowadays these all models are use for object detection
- - by using this model we will do own task like - person detection, vehicle detection etc.
+ - we will use yoloV4 model.
+ - by using this model we can do own task like - person detection, vehicle detection etc.
 
 
 ## What specific steps would you take to detect each object in the image?
 - There is some steps 
- - pip install pymupdf
- - import fitz
+ - first we will install all library which is located in requirements.txt
+ - *pdf_process* -  In this file i write code for extracting all links from pdf file and by using request library i download all images from links.
+ - *main.py* - i write code in this file for real-time object detection. I have use some library in this
  - By using this we can extract Text, images, Extracting Links from Page
  - fitz library is specifically designed for working with PDF documents
  - aslo we can use *request* library for extracting  images form web.
  - The fitz library is a Python binding for the MuPDF library, and it is commonly used for working with PDF documents
 
 
-#### import subprocess
- - This code is using the subprocess module to run the wget command in a loop for each link in the page_links list. The purpose is to download images from the specified links using the wget utility.
+#### import request
+ - The requests module in Python is a popular HTTP library that allows you to send HTTP requests and handle the responses easily
 
 
 ## Import necessary library
 *import cv2* - Open Source Computer Vision Library (OpenCV for image processing)
-*import numpy as np* - NumPy for numerical operations
-*import time* - Time for measuring execution time
-*import os* - OS is used for interacting with the operating system
+*import numpy as np* - NumPy for numerical operation.
 *import matplotlib.pyplot as plt* - visulization tools in python library
-*from google.colab.patches import cv2_imshow* - For displaying images in Google Colab
+*numpy* 
+*matplotlib*
+*PyMuPDF*
+*requests*
+*Pillow*
+*mplcursors*
+*io*
 
 
 ## we will use pretrained model YOLOv4 for object detection
@@ -40,8 +46,7 @@
 
 
 ## some potential challanges are there
- - First i was trying to do these task on jupyter notebook and VSCODE but my pc is not compatible so i use google colab.
- - It is possible that it may not be able to detect well on some images.
+ - This is realtime object detection task. but i have not done all task. I'll update when it's complete.
 
 
 ## What technologies would you use and why?
@@ -49,7 +54,4 @@
 
  - *NumPy* - It is a numerical computing library in python. it supports  multi-dimensional arrays and matrices. Used this code for array manipulation.
  - *Matplotlib* - Matplotlib is a 2D plotting library for Python. Used in this code for displaying images using plt.imshow()
- - *Google Colab* - Google Colab is a cloud-based Jupyter notebook environment provided by Google.
  - *Darknet (YOLOv4):* - YOLOv4 is a  real-time object detection system.
- - *wget* - wget is a utility for downloading files from the web. Used in the code to download the pre-trained YOLOv4 weights.
- - *Exception Handling* - For handling errors.
