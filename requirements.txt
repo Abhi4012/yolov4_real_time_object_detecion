@@ -1,0 +1,9 @@
+numpy
+matplotlib
+PyMuPDF
+requests
+Pillow
+mplcursors
+opencv-python
+io
+BytesIO
